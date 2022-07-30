@@ -10,9 +10,11 @@ body {
   height: 100%;
 }
 
-ul[class],
-ol[class] {
+ul,
+ol {
   padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 body,
@@ -37,11 +39,6 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   background-color: #fff;
-}
-
-ul[class],
-ol[class] {
-  list-style: none;
 }
 
 a {
@@ -498,3 +495,120 @@ select {
 }
 
 /* .................footer......................... */
+.footer {
+  background-color: #000;
+  color: #7e7e7e;
+  font-family: "Montserrat";
+}
+
+.footer-conteiner {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: calc(20px + (62.5 - 20) * ((100vw - 320px) / (1440 -320)));
+  /* padding: 100px 200px 100px 200px; */
+  padding-top: calc(30px + (100 - 30) * ((100vw - 320px) / (1440 -320)));
+  padding-bottom: calc(30px + (100 - 30) * ((100vw - 320px) / (1440 -320)));
+  padding-right: calc(30px + (200 - 30) * ((100vw - 320px) / (1440 -320)));
+  padding-left: calc(30px + (200 - 30) * ((100vw - 320px) / (1440 -320)));
+}
+
+.nav-col {
+}
+.nav-col__name {
+  color: #fff;
+  font-weight: 400;
+  /* font-size: 14px; */
+  font-size: calc(11px + (14 - 11) * ((100vw - 320px) / (1440 -320)));
+  line-height: 143%;
+  padding-bottom: calc(10px + (40 - 10) * ((100vw - 320px) / (1440 -320)));
+}
+.nav-col__item {
+}
+
+.nav-col__link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+.nav-col__link:hover {
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.nav-col__item-white {
+  color: #fff;
+}
+.nav-col-info {
+  text-align: right;
+}
+.nav-col__text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 0px 0px 15px 0px;
+}
+.form {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+.search {
+  width: calc(120px + (200 - 120) * ((100vw - 320px) / (1440 -320)));
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  margin: 0px;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #7e7e7e;
+}
+
+.submit {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  background-color: #fff;
+  padding: 12px 40px;
+  margin: 0px;
+  border: 0;
+  cursor: pointer;
+}
+
+.soc-logos {
+  display: flex;
+  gap: 24px;
+  justify-content: right;
+  padding: 49px 0px 17px 0px;
+}
+.soc-logo {
+}
+.copyright {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+}
+.year {
+}
+
+@media (max-width: 952px) {
+  .footer-conteiner {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .nav-col-info {
+    grid-column: 2/4;
+  }
+}
+
+@media (max-width: 510px) {
+  .footer-conteiner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-col-info {
+    grid-column: 1/3;
+  }
+}
